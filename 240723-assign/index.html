@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="KR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>건강 스포츠 센터</title>
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/grid.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&display=swap" rel="stylesheet">
+    <script src="jquery-1.12.4.min.js"></script>
+    <script>
+       $(document).ready(function(){
+         $(".gnb").hover(function(){
+           $(this).find('.lnb, .lnbbox').stop().slideToggle();
+         });
+       });
+    </script>
+</head>
+<body>
+    <header>  
+        <div class="container">
+            <div class="row">
+                <div class="col-6">
+                    <div class="logobox"></div>
+                    <a href="#" class="logo">건강 스포츠 센터</a>
+                </div>
+                <nav class="col-6 right-nav">
+                    <ul class="gnb">
+                        <li>
+                            <a href="">스포츠센터</a>
+                            <ul class="lnb">
+                                
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="">프로그램소개</a>
+                            <ul class="lnb">
+                                <li><a href="">프로그램1</a></li>
+                                <li><a href="">프로그램2</a></li>
+                                <li><a href="">프로그램3</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="">커뮤니티</a>
+                            <ul class="lnb">
+                                <li><a href="">이용자 후기</a></li>
+                                <li><a href="">센터 일정</a></li>
+                                <li><a href="">사용자 매뉴얼</a></li>
+                            </ul>
+                        </li>
+                        <div class="lnbbox"></div>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </header>
+    <div class="hero container">
+        <div class="row">
+            <div class="hero-in col-8">
+                <div class="hero-incut ani">
+                    <div class="banner">
+                        <img src="img/1.jpg" alt="돔">
+                        
+                        <p>지금 바로 스포츠 센터로 오세요</p>
+                    </div>
+                    <div class="banner">
+                        <img src="img/2.jpg" alt="피트니스">
+                        
+                        <p>피트니스 수업까지 제공</p>
+                    </div>
+                    <div class="banner">
+                        <img src="img/3.jpg" alt="조깅">
+                        
+                        <p>조깅이란 무엇인가 무료강의</p>
+                    </div>
+                </div>
+            </div>
+            <div class="hero-nav col-4">
+                <div class="hero-navtext">
+                    <ul>
+                        <li><a href=""></a>건강을 위한!</li>
+                        <li><a href=""></a>무언가 글</li>
+                        <li><a href=""></a>무언가 글자</li>
+                        <li><a href=""></a>무언가 무언가</li>
+                    </ul>
+                </div>
+                <div class="hero-navtext">
+                    <ul>
+                        <li><a href=""></a>가나다라마바삽니다</li>
+                        <li><a href=""></a>가나다라마바팝니다</li>
+                        <li><a href=""></a>가나다라마바샀습니다</li>
+                        <li><a href=""></a>가나다라마바팔았습니다</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <section class="middle">
+        <h1 class="mdate">00:00</h1>
+        <div class="container">
+            <div class="row">
+                <div class="col-6">
+                    <img src="img/4.jpg" alt="4">
+                </div>
+                <div class="col-6">
+                    <img src="img/5.jpg" alt="5">
+                </div>
+            </div>
+        </div>
+    </section>
+    <script src="js/script.js"></script>
+</body>
+</html>

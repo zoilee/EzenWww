@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box{
+            position: relative;
+            width: 60%;
+            height: 400px;
+            border: 1px solid #333;
+        }
+        .inbox{
+            position: absolute;
+            width: 200px;
+            height: 200px;
+            background: rgba(232, 211, 0, 0.3);
+            top: 100px;
+            left: calc(50% - 100px);
+           /*opacity: 0.3 */
+        }
+        h1{
+            text-align: center;
+            line-height: 150px;
+        }
+        /*.box::before{
+            content:"박스1";
+            width: 100px;
+            height: 100px;
+            background: lightblue;
+            display: block;
+            position: absolute;
+            
+        }
+        .box::after{
+            content:"박스2";
+            width: 50px;
+            height: 50px;
+            background: greenyellow;
+            display: block;
+            position: absolute;
+            bottom: 0;
+            right: 0;
+        }
+        */
+    </style>
+</head>
+<body>
+    <!-- 
+    가상요소 : 요소이름::가상요소
+     -->
+    <div class="box">
+        <p>
+            연소자의 근로는 특별한 보호를 받는다. 국방상 또는 국민경제상 긴절한 필요로 인하여 법률이 정하는 경우를 제외하고는, 사영기업을 국유 또는 공유로 이전하거나 그 경영을 통제 또는 관리할 수 없다.모든 국민은 종교의 자유를 가진다. 지방의회의 조직·권한·의원선거와 지방자치단체의 장의 선임방법 기타 지방자치단체의 조직과 운영에 관한 사항은 법률로 정한다.
+        </p>
+        <div class="inbox">
+            <h1>inbox입니당</h1>
+        </div>
+    </div>
+</body>
+</html>

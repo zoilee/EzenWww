@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+
+    </style>
+    <script src="../js/jquery-1.12.4.min.js"></script>
+    <script>
+        // $(function(){});
+        $(document).ready(function(){
+            // $(".man").show();   //show() 보이기 hide()숨기기 toggle() 보이면 숨기고 숨기면 보이게
+            $("#hide").click(function(){
+                $(".man").hide(1000);
+            });
+            $("#show").click(function(){
+                $(".man").show(1000,(function(){
+                    alert("보임");
+                }));
+                
+            });
+            $("#toggle").click(function(){
+                $(".man").toggle(5000);
+            });
+        }); //jquery
+    </script>
+</head>
+<body>
+    
+    <div class="man">철수와 철수</div>
+    <button id="hide">숨기기</button>
+    <button id="show">보이기</button>
+    <button id="toggle">토글하기</button>
+</body>
+</html>

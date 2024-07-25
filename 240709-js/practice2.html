@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p id="txt"></p>
+    <script>
+        let sell_4 = prompt("4분기 판매량을 입력하세요"); // 4분기판매량
+        let sell_1 = 1200 // 1분기판매량  
+        let sell_2 = 1300 // 2분기판매량
+        let sell_3 = 1000 // 3분기판매량
+        
+        let tt_sell = (sell_1 + sell_2 + sell_3)/3 //tt_sell 1,2,3분기 평균 판매량
+
+        let rs = sell_4>tt_sell ? ("좋아요~"):("야근입니다.")
+        
+        document.getElementById("txt").innerHTML = rs;        
+
+
+    </script>
+
+    
+</body>
+</html>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p id="txt">
+        <script>
+            let name = prompt("당신의 이름을 입력하세요.");
+            let tall = Number(prompt("당신의 키를 입력해주세요."));
+            let weight = Number(prompt("당신의 몸무게를 입력해주세요"));
+            
+            //평균체중
+            st_weight = (weight - 100) * 0.9;
+
+            //오차범위
+            let rs = weight >= st_weight -5 && weight <= st_weight +5;
+            
+            let txt = rs?"적정체중입니다." : "적정체중이 아닙니다";
+            
+            
+
+            // let result  = st_weight<=(weight+5) && st_weight>=(weight-5) ? "적정체중입니다.":"적정 체중이 아닙니다.";
+          
+            document.getElementById("txt").innerHTML = name+ "님은" + txt;
+          
+            
+
+
+        </script>
+
+
+    </p>
+    
+</body>
+</html>

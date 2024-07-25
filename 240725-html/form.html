@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="//code.jquery.com/jquery.min.js"></script>
+    <script>
+        $(function(){
+
+             /*
+             1. ^ : 문자의 시작
+             2. [a-z] : 첫 글자는 알파벳 소문자만 (시작은 알파벳 소문자만 가능)
+             3. [a-zA-Z0-9]{3,} : 3자 이상은 알파벳 소문자, 대문자, 숫자만 가능
+             4. $ : 문자의 끝
+             */
+
+            $("#btn").click(function(){
+                const userid = $("#userid").val();
+                $("#uid").html(userid);
+                
+                const regex = /^[a-z][a-zA-Z0-9]{3,}/;
+                const test = regex.test(userid);
+                
+                console.log(test)
+
+                if(test){alert("ok")}
+                    else{alert("error")}
+                
+
+            });
+            
+        });
+    </script>
+</head>
+<body>
+    <form>
+        <input type="text" name="userid" id="userid">
+        <button tyep="button" id="btn">전송</button>
+    </form>
+</body>
+</html>

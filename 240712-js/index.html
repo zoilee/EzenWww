@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // window.location.href="https://google.com";
+
+        // let tv = new Object();
+        // tv.color = "green";
+        // tv.price = 100000;
+        // tv.info = function(){
+        //     document.write("tv색상 :" + this.color, "<br>")
+        //     document.write("tv가격 :" + this.price);
+        // }
+
+        // tv.info();
+        // "문자열" + 변수 + "문자열" + 변수;
+        // `문자열 ${변수} 문자열 ${변수};
+        // let mydate = new Date();
+        // let nowYear = mydate.getFullYear();
+        // let nowMonth = mydate.getMonth()+1;
+        // let nowDate = mydate.getDate();
+        // let nowWeek = mydate.getDay();
+
+        // switch(nowWeek){
+        //     case 0:
+        //         nowWeek = "일";
+        //     break;
+        //     case 1:
+        //         nowWeek = "월";
+        //     break;
+        //     case 2:
+        //         nowWeek = "화";
+        //     break;
+        //     case 3:
+        //         nowWeek = "수";
+        //     break; 
+        //     case 4:
+        //         nowWeek = "목";
+        //     break;
+        //     case 5:
+        //         nowWeek = "금";
+        //     break;
+        //     case 6:
+        //         nowWeek = "토";
+        //     break;
+        // }
+
+
+        // document.write(`오늘은 ${nowYear}년 ${nowMonth}월 ${nowDate}일 ${nowWeek}요일 입니다.`);
+        let WcStartDay = new Date(2002,4,31);
+        let getDay1 = WcStartDay.getDay();
+        let StYear = WcStartDay.getFullYear();
+        let StMonth = WcStartDay.getMonth()+1;
+        let StDate = WcStartDay.getDate();
+        let StWeek = WcStartDay.getDay();
+        
+        let WcEndDay = new Date(2002,5,30);
+        let getDay2 = WcEndDay.getDay();
+        let EnYear = WcEndDay.getFullYear();
+        let EnMonth = WcEndDay.getMonth()+1;
+        let EnDate = WcEndDay.getDate();
+        let EnWeek = WcEndDay.getDay();
+
+
+
+        switch(getDay1){
+            case 0:
+                StWeek = "일";
+            break;
+            case 1:
+                StWeek = "월";
+            break;
+            case 2:
+                StWeek = "화";
+            break;
+            case 3:
+                StWeek = "수";
+            break; 
+            case 4:
+                StWeek = "목";
+            break;
+            case 5:
+                StWeek = "금";
+            break;
+            case 6:
+                StWeek = "토";
+            break;
+        }
+        switch(getDay2){
+            case 0:
+                EnWeek = "일";
+            break;
+            case 1:
+                EnWeek = "월";
+            break;
+            case 2:
+                EnWeek = "화";
+            break
+            case 3:
+                EnWeek = "수";
+            break; 
+            case 4:
+                EnWeek = "목";
+            break;
+            case 5:
+                EnWeek = "금";
+            break;
+            case 6:
+                EnWeek = "토";
+            break;
+        }
+
+
+
+
+
+        document.write(`대한민국 월드컵은 ${StYear}년 ${StMonth}월 ${StDate}일 ${StWeek}요일부터 ${EnYear}년 ${EnMonth}월 ${EnDate}일 ${EnWeek}요일까지 진행됬습니다`)
+    </script>
+    
+</body>
+</html>

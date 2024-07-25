@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        table{
+            width: 100%;
+            border-collapse: collapse;
+        }
+        table,th,td{
+            border: 1px solid #333;
+        }
+        th,td{
+            padding: 15px;
+        }
+        #tbl{
+            border: 1px solid #ddd;
+            background: #ededed;
+            width: 800px;
+            padding: 30px;
+            margin: 50px auto;
+        }
+        
+    </style>
+</head>
+<body>
+    <div id="tbl"></div>
+    <script>
+        let str = "<table>"
+        
+         let str2 = "<tr>";
+            str2 += "<td>1</td><td>2</td><td>3</td>";
+            str2 += "</tr>";
+        
+        let str3 = "</table>";
+
+        document.getElementById("tbl").innerHTML = str+str2+str2+str2+str2+str3;
+    </script>
+</body>
+</html>

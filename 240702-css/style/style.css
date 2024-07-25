@@ -1,0 +1,81 @@
+ /*  *{box-sizing: border-box;} */
+  
+    /*
+        1개: top-right-bottom-left
+        2개: top-bottom, left-right
+        3개: top, left-right, bottom
+        4개: top, right, bottom, left
+        서로 부딪힐때는 큰 쪽만 적용된다.
+    
+        inline은 margin-top, margin-bottom은 적용되지 않는다.
+        width, height도 적용되지 않는다.
+    
+        inline-block 은 인공적으로 만드는 태그
+        inline적 성격을 가지고있지만 크기를 잡을 수 있음
+
+        a img spam 인라인
+
+        */
+
+body{
+    
+    font-family: sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 16px;
+    /*
+    px,em(부모의 크기를 기준으로
+    rem(body 의 크기를 기준으로
+    vh, vw (브라우저 사이즈 기준 100vh)
+    */
+    .a{
+        font-size: 3rem;
+        
+    }
+    .b{
+        font-size: 2rem;
+        font-variant: small-caps;
+    }
+    color: black;
+    /*
+    light, nomarl, bold, bolder
+
+    nomal = 400
+    */
+    font-weight: 800;
+    font-style: normal;
+    /*
+    font style: normal italic oblique
+    */
+    
+        
+}   
+/*
+text-align:left right center justfly
+*/
+h1{
+    text-decoration-line:line-through ;
+    text-decoration-color: red;
+    text-decoration-style:dashed ;
+}
+a{
+    text-decoration-line:none ;
+}
+
+.sns{
+    display: inline-block;
+    width: 37px;
+    height: 37px;
+    border-radius: 50%;
+    background-image: url(/240702-css/image/sns.png);
+    background-repeat: no-repeat;
+}
+.twitter{
+background-position: -188px 0px;
+}
+.kakaotalk{
+background-position: -188px -43px;
+}
+.instagram{
+background-position: -188px -169px;
+}

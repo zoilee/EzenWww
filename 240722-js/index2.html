@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div{
+            width: 200px;
+            height: 200px;
+            margin: 30px;
+            display: none;
+        }
+        .red{
+            background:red;
+        }
+        .green{
+            background: green;
+        }
+        .blue{
+            background: blue;
+        }
+
+    </style>
+    <script src="../js/jquery-1.12.4.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            $(".but1").click(function(){
+                $(".red").fadeIn("slow");
+                $(".green").fadeIn(3333);
+                $(".blue").fadeIn(5333);
+            });
+            $(".but2").click(function(){
+                $(".red").fadeOut(5333);
+                $(".green").fadeOut(3333);
+                $(".blue").fadeOut("slow");
+            });
+            $(".but3").click(function(){
+                $(".red").fadeToggle("slow");
+                $(".green").fadeToggle(3333);
+                $(".blue").fadeToggle(5333);
+            });
+            $(".red").click(function(){
+                $(".red").fadeTo("slow", 0.2);
+                $(".green").fadeTo("slow", 0.5);
+                $(".blue").fadeTo("slow", 0.7);
+            });
+        }); //jquery
+    </script>
+</head>
+<body>
+    <button type="button" class="but1">fadeIn</button>
+    <button type="button" class="but2">fadeOut</button>
+    <button type="button" class="but3">fadeToggle</button>
+    <div class="red"></div>
+    <div class="green"></div>
+    <div class="blue"></div>
+</body>
+</html>

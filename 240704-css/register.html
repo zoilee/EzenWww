@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .regi{border: 1px solid #333;
+            height: 500px;
+            margin: 10px;
+            padding: 10px;
+        }
+    input[type=text], input[type=password], input[type=number], input[type=email], select, textarea{
+        display: inline-block;
+        width: 100%;
+        border: 1px solid #dfdfdf;
+    }
+    </style>
+</head>
+<body>
+    <h1>회원가입</h1>
+    <div class="regi">
+    <form action="" method="post">
+        <label for="id">ID</label>
+        <input type="text" name="ID" id="id" value="" placeholder="Your ID">
+        <label for="pass">Password</label>
+        <input type="password" name="pass" id="pass" value="" placeholder="Your Password">
+        <label for="name">Name</label>
+        <input type="text" name="name" id="name" value="" placeholder="Your Name">
+        <label for="num">Number</label>
+        <input type="number" name="num" id="num" value="" placeholder="Your number">
+        <label for="email">E-Mail</label>
+        <input type="email" name="email" id="email" value="" placeholder="Your E-Mail">
+        
+        
+        <label for="x">남기실 말씀</label>
+        <textarea name="x" id="x" placeholder="남기실 말씀"></textarea>
+        <button type="submit">회원가입</button>
+    
+
+    </form>
+    </div>
+</body>
+</html>

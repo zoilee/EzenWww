@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div{
+            border: 1px solid  #333;
+            background-color: #ace69b;
+            width: 300px;
+            height: 100px;
+        }
+        .static{
+            position: static;
+            border: 3px solid #38941c;
+            left: 30px;
+            top: 50px;
+        }/* 기본값 static일 경우 postion이 적용되지않음*/
+        .relative{
+            position: relative;
+            border: 3px solid #999;
+            background-color: #ffe5c2;
+            left: 30px;
+            top: 50px;
+        }  /* relative 상대적인  원리위치를 기준으로 상대적으로 변경 */
+        .fixed{
+            position: fixed;
+            border: 3px solid #346c86;
+            background-color: #aee5ff;
+            bottom: 30px;
+            right: 30px;
+        } /* 브라우저 화면을 기준으로 포지션 결정*/
+        .absolute{
+            position: absolute;
+            border: 3px solid #e04e4e;
+            background-color: #ffc6c6;
+            top: 320px;
+            right: 0px;
+        } /* 부모의 포지션 값을 기준으로 left,top, 등이 적용됨*/
+        .main{
+            position: relative;
+            border: 3px solid #346c86;
+            background-color: #cee4ee;
+            width: 3000px;
+            height: 5000px;
+            left: 20px;
+            top: 20px;
+
+        }
+        .absolute2{
+            position: absolute;
+            border: 3px solid #e04e4e;
+            background-color: #ffc6c6;
+            top: 320px;
+            right: 0px;
+        }
+        .absolute3{
+            position: absolute;
+            border: 3px solid #ff4bc3;
+            background-color: #ffa4d6;
+            top: 200px;
+            right: 200px;
+        }
+        .ppp{
+            position: fixed;
+            border: 3px solid #346c86;
+            background-color: #aee5ff;
+            bottom: 50px;
+            right: 300px;
+
+        }
+    </style>
+
+</head>
+<body>
+    <div class="main"> 가나다라
+        <div class="static">첫번째 요소(static)</div>
+        <div class="relative">두번쨰 요소(relative)</div>
+        <div class="fixed">세번쨰 요소(fixed)</div>
+        <div class="absolute">네번쨰 요소(absolute)</div>
+    </div>
+    <div class="absolute2">
+        다섯번째 요소 (absolute2 body에적용)
+    </div>
+    <div class="ppp">
+        <div class="absolute3">
+        여섯번째 요소 (absolute3 fixed 에적용)
+        </div>
+    </div>
+
+    </div>
+</body>
+</html>

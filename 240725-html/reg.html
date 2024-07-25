@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>정규표현식</title>
+    <style>
+        p{
+            white-space:pre-line;
+            font-size:18px;
+        }
+        .highlight {
+            background-color: yellowgreen;
+            color: red;
+            font-weight:bold;
+        }
+        .group {
+            font-weight: bold;
+            color: blue;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <input type="text" name="reg" id="reg" placeholder="정규 표현식을 입력하세요">
+    </div>
+    <div id="output"></div>
+    <div id="text">
+       <p> 
+           Hi there, Nice to meet you. And Hello there and hi.
+           I love grey(gray) color not a gry, graay and graaay.
+           grdy
+           Ya ya YaYaYa Ya
+       </p>
+       <p>
+           abcdefghijklmnopqrstuvwxyz
+           ABSCEFGHIJKLMNOPQRSTUVWZYZ
+           1234567890
+       </p>
+       <p>
+          .[]{}()\^$|?*+
+       </p>
+
+
+       <p>
+        홍길동
+       </p>
+
+       <p>
+         010-898-0893
+         010-4053-3412
+         02-878-8888
+         02-1234-1234    
+       </p>
+
+       <p>
+         wein.musecom.net@gmail.com
+         hello@daum.net
+         hello@daum.co.kr      
+       </p>
+
+
+       <p>
+         https://www.youtu.be/-ZClicWm0zM
+         https://youtu.be/-ZClicWm0zM
+         youtu.be/-ZClicWm0zM     
+       </p>
+
+
+    </div>
+</div>
+<script>
+    document.getElementById('reg').addEventListener('input', function() {
+        const regInput = document.getElementById('reg').value;
+        const textDiv = document.getElementById('text');
+        const outputDiv = document.getElementById('output');
+        const paragraphs = textDiv.querySelectorAll('p');
+        
+        // Clear previous highlights and output
+        paragraphs.forEach(p => {
+            p.innerHTML = p.textContent;
+        });
+        outputDiv.innerHTML = '';
+
+        try {
+            const regex = new RegExp(regInput, 'gm');
+            //flag  g global   i는 case insensitive (대소문자 구분없이), m=multiline, s=single line (dotAll), u = unicode, y = sticky
+
+            paragraphs.forEach(p => {
+                const text = p.textContent;
+                let match;
+                let highlightedText = text;
+                const groupMatches = [];
+
+                while ((match = regex.exec(text)) !== null) {
+                    if (match.length > 1) {
+                        groupMatches.push(match.slice(1));  // Capture groups only, excluding the full match
+                    }
+
+                    // To avoid infinite loops with zero-length matches, advance the lastIndex property manually
+                    if (regex.lastIndex === match.index) {
+                        regex.lastIndex++;
+                    }
+                }
+
+                // Highlight matched groups in text
+                highlightedText = highlightedText.replace(regex, (match) => {
+                    return `<span class="highlight">${match}</span>`;
+                });
+                p.innerHTML = highlightedText;
+
+                // Append group matches to output
+                if (groupMatches.length > 0) {
+                    const groupOutput = document.createElement('div');
+                    groupOutput.className = 'group';
+                    groupMatches.forEach((groups, index) => {
+                        groupOutput.innerHTML += `<p>Match ${index + 1}: ${groups.map((g, i) => `Group ${i + 1}: ${g}`).join(', ')}</p>`;
+                    });
+                    outputDiv.appendChild(groupOutput);
+                }
+            });
+        } catch (e) {
+            // Handle invalid regular expressions
+            console.error(e);
+        }
+    });
+</script>
+</body>
+</html>

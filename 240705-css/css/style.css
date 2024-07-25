@@ -1,0 +1,129 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&display=swap');
+*{box-sizing: border-box;}
+body{
+    font-family: "Noto Sans KR", sans-serif;
+    color: #333;
+    margin: 0;
+    background-color: #ededed;
+}
+
+a{
+    text-decoration: none;
+    color: #666;
+}
+a:hover{
+    color: #333;
+}
+
+.container{
+    background-color: #fff;
+    margin: 100px auto;
+    width: 800px;
+    max-width: 100%;
+    padding: 50px;
+    box-shadow: 0 0 15px 0 rgba(0, 0, 0, 0.12);
+    border-radius: 15px;
+}
+.container h1{
+    text-align: center;
+    text-shadow: 0 0 10px rgba(0, 0, 0, 0.15);
+}
+ul.list{
+    margin: 0;
+    padding: 0;
+    margin-top: 30px;
+    list-style-type: none;
+}
+ul.list li{
+    padding: 15px 30px;
+    border-bottom: 1px dashed #666;
+}
+
+label.label{
+    display: inline-block;
+    width: 100px;
+    padding-right: 20px;
+    text-align: right;
+}
+input[type=text],
+input[type=password]{
+    width: 300px;
+    height: 35px;
+    background: #ededed;
+    border-radius: 5px;
+    border: 1px sloid #ccc;
+}
+input[type=text]:focus,
+input[type=password]:focus{
+    background: #fff;
+    border: 1px solid #999;
+}
+input.tel{
+    width: 100px;
+    margin-left: 5px;
+    margin-right: 5px;
+}
+#sample6_extraAddress{
+    margin-left: 104px;
+    margin-top: 4px;
+}
+input.addr{
+    width: 400px;
+}
+.regi{
+    margin-left: 104px;
+    margin-top: 4px;
+}
+
+
+
+.myButton {
+	background-color:#7892c2;
+	border-radius:28px;
+	border:1px solid #4e6096;
+	display:inline-block;
+	cursor:pointer;
+	color:#ffffff;
+	font-family:Arial;
+	font-size:17px;
+	padding:4px 31px;
+	text-decoration:none;
+	text-shadow:0px 1px 0px #283966;
+    
+}
+.myButton:hover {
+	background-color:#476e9e;
+}
+.myButton:active {
+	position:relative;
+	top:1px;
+}
+
+
+.myButton2 {
+	background-color:#21d867;
+	border-radius:28px;
+	border:1px solid #0d962b;
+	display:inline-block;
+	cursor:pointer;
+	color:#ffffff;
+	font-family:Arial;
+	font-size:17px;
+	padding:15px 31px;
+	text-decoration:none;
+	text-shadow:0px 1px 0px #46db66;
+    
+}
+.myButton2:hover {
+	background-color:#0d962b;
+}
+.myButton2:active {
+	position:relative;
+	top:1px;
+}
+.regibox {
+    text-align: center;
+    padding-top: 30px;
+    padding-bottom: 20px;
+}

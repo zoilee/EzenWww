@@ -1,0 +1,171 @@
+body{
+    margin:0;
+    font-family: "Noto Sans KR", sans-serif;
+    color:#666666;
+}
+a{
+    text-decoration: none;
+    color:#666666;
+}
+h1{
+    color: #666666;
+}
+
+
+
+/***** header page ******/
+
+a.logo{
+    display:block;
+    font-size:40px;
+    font-weight:bold;
+    line-height:80px;
+}
+.gnb{
+    display:flex;
+}
+
+ul.gnb{
+    justify-content: space-between;
+    position:relative;
+    background: #009688;
+}
+ul.gnb>li>a{
+    display:block;
+    margin:20px 0;
+    line-height:20px;
+    padding:10px 20px;
+    transition:all 300ms;
+    border-radius:10px;
+    font-size: 23px;
+    
+    color: #ffffff;
+}
+ul.gnb>li>a:hover{
+    background: #39afa3;
+    font-weight:600;
+}
+.lnb{
+    display: none;
+    position: absolute;
+    background-color: #ffffff;
+    z-index: 3;
+    
+}
+ul.lnb>li>a{
+    font-size: 14px;
+    display:block;
+    margin:5px 0;
+    line-height:20px;
+    padding:10px 20px;
+
+}
+.lnbbox{
+    position: absolute;
+    top: 80px;
+    height: 220px;
+    width: 570px;
+    display: none;
+    background: #ffffff;
+    z-index: 1;
+    
+}
+/***** hero page *****/
+.hero{
+    padding-top: 30px;
+    height: 500px;
+    overflow: hidden;
+    position: relative;
+    z-index: -1;
+}
+.hero-in{
+    width: 900px;
+    height: 500px;
+    position: relative;
+    overflow: hidden;   
+}
+.hero-incut{
+    width: 2700px;
+    height: 500px;
+    position: absolute;
+    overflow: hidden;
+    
+}
+.banner{
+    width: 900px;
+    height: 500px;
+    float: left;
+    position: relative;
+    z-index: -2;
+}
+.banner img{
+    top: 0;
+    left: 0;
+    max-width: 100%;
+    position: absolute;
+    z-index: -3;
+}
+
+
+.banner p {
+
+    padding:30px;
+    background:rgba(255,255,255,0.9);
+    width:400px;
+    margin-top: 350px;
+    margin-left:450px;
+    font-size:18px;
+    font-weight:600;
+    line-height:1.2;
+    border-radius:10px;
+    color: #009688;
+}
+.hero-nav{
+    padding-left: 20px;
+    color: #666666;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+
+}
+.hero-navtext{
+   margin-left: 60px;
+   
+   line-height: 3;
+   text-align: left;
+   
+}
+.hero-navtext>li>a:hover{
+    background: #6a6a6a;
+}
+.ani{
+    animation: slides 0.4s ease-in-out;
+    animation-fill-mode: forwards;
+}
+
+
+/***** SECTION middle PART *****/
+section.middle{
+    padding: 80px;
+}
+.mdate{
+    font-size: 35px;
+    font-weight: 700;
+    text-align: center;
+    padding: 30px;
+}
+.middle img{
+    width: 100%;
+}
+
+
+
+
+@keyframes slides {
+    from{
+        left: 0;
+    }
+    to{
+        left: -900px;
+    }
+}

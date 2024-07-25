@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box{
+            position: relative;
+            background-color: #4260aa;
+            width: 500px;
+            height: 300px;
+            overflow: hidden;
+            border: 3px solid black;
+        }
+        .text{
+            position: absolute;
+            top: 10px;
+            left: 40px;
+        }
+        p{
+            font-size: 30px;
+            font-weight: bold;
+            line-height: 20px;
+            color: white;
+        }
+        .face{
+            position: absolute;
+            right: calc(0% - 60px);
+            bottom: calc(0% - 50px);
+            background: white;
+            width: 250px;
+            height: 230px;
+            border: 7px solid black;
+            border-radius: 160px;
+            z-index: 1;
+        }
+        .eye_l{
+            position: absolute;
+            right: calc(0% + 45px);
+            bottom: calc(28%);
+            width: 1px;
+            height: 1px;
+            border: 6px solid black;
+            background: black;
+            border-radius: 10px;
+            z-index: 2;
+        }
+        .eye_r{
+            position: absolute;
+            right: calc(0% + 85px);
+            bottom: calc(28%);
+            width: 1px;
+            height: 1px;
+            border: 6px solid black;
+            background: black;
+            border-radius: 10px;
+            z-index: 2;
+        }
+        .nose{
+            position: absolute;
+            right: calc(0% + 49px);
+            bottom: calc(14%);
+            width: 43px;
+            height: 40px;
+            /*overflow: hidden;*/
+            background: #a8e6ff;
+            border-radius: 70px;
+            z-index: 2;
+            overflow: hidden;
+        }
+        .mouth_l{
+            position: absolute;
+            border: 5px solid black;
+            width: 50px;
+            height: 50px;
+            right: calc(50% - 2px);
+            top: calc(0% - 25px);
+            border-radius: 150px;
+            z-index: 3;
+        }
+    
+        .mouth_r{
+            position: absolute;
+            border: 5px solid black;
+            width: 50px;
+            height: 50px;
+            left: calc(100% - 24px);
+            top: calc(0% - 25px);
+            border-radius: 150px;
+            z-index: 3;
+        }
+         
+
+        
+    </style>
+</head>
+<body>
+    <div class="box">
+        <div class="text">
+            <p>니니즈와 함께 하는</p>
+            <p>서포터즈 카페</p>
+            <p>구경하실래요?</p>
+        </div>
+        <div class="nose">
+            <div class="mouth_l"></div>
+            <div class="mouth_r"></div>
+        </div>
+        <div class="eye_l"></div>
+        <div class="eye_r"></div>
+        <div class="face"></div>
+
+     
+
+    </div>
+</body>
+</html>

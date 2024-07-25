@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+         *{
+        box-sizing: border-box;
+    }
+    h1{
+        text-align: center;
+        margin-top: 50px;
+    }
+   
+    .box{
+        width: 650px;
+        height: 600px;
+        margin: 30px auto;
+        margin-left: auto;
+        margin-right: auto;
+       
+    }
+    .col{
+        width: 33.3333%;
+        height: 220px;
+        padding: 15px;
+        float: left;
+        overflow: hidden;
+        position: relative;
+    }
+    .col img{
+        max-width: 100%;
+    }
+    .col div{
+        text-align: center;
+        width: 100%;
+        position: absolute;
+        height: 80px;
+        bottom: 0;
+        left: 0;
+        z-index: 2;
+        background-color: rgba(255, 255, 255, 0.7);
+        display: none;
+    }
+
+
+    .col:hover div{
+        display: block;
+    }
+    </style>
+</head>
+<body>
+    <h1>카카오 캐릭터</h1>
+    <div class="box">
+        <div class="col">
+            <img src="image/001.png" alt="개">
+            <div>
+                <h2>프로도</h2>
+            </div>
+        </div>
+        <div class="col">
+            <img src="image/002.png" alt="곰">
+            <div>
+                <h2>라이언</h2>
+            </div>
+        </div>
+        <div class="col">
+            <img src="image/003.png" alt="오리">
+            <div>
+                <h2>튜브</h2>
+            </div>
+        </div>
+    </div>
+    
+</body>
+</html>

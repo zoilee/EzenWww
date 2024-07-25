@@ -1,0 +1,21 @@
+/*
+이곳은 주석입니다.
+*/
+h1{
+    color:blue;
+    font-size: 50px;
+}
+p{
+    color:red;
+    font-size: 30px;
+}
+#head1{
+    color: green;
+}
+.body1{
+    color: pink;
+}
+p{
+    color: red;
+    
+}

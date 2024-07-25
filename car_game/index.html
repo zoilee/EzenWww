@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>방구차 주차시키기</title>
+    <style>
+        *{box-sizing: border-box;}
+        html,body{
+            height: 100%;
+            overflow: hidden;
+        }
+        #carbox{
+            position: absolute;
+            width: 40px;
+            transform: rotate(180deg);
+            top: 50px;
+        }
+        #carbox img{
+            max-width: 100%;
+        }
+        #clouds{
+            width: 30px;
+            margin: auto;
+            display: none;
+        }
+        #clouds img{
+            max-width: 100%;
+        }
+        .parking{
+            width: 60px;
+            height: 60px;
+            border-top: 5px solid transparent;
+            border-left: 5px solid #666;
+            border-right: 5px solid #666;
+            border-bottom: 5px solid #666;
+            position: fixed;
+            right: 20px;
+            bottom: 20px;
+        }
+    </style>
+    <script src="js/jquery-1.12.4.min.js"></script>
+    <script>
+        // $(function(){  });
+        $(document).ready(function(){
+            $(document).keydown(function(event){
+                //let key = event.key; 키보드에서 눌려진 키 값을 확인하는 방법
+                /*
+                  방향키의 키코드값 : left-37 up-38 right-39 down-40  
+                */
+                let keycode = event.which||evnet.keyCode;
+                switch(keycode){
+                    case 35:
+                        $("#carbox").stop();
+                        $("#clouds").css("display","none");
+                    break;
+                    case 37:    //왼쪽
+                        $("#carbox").css("transform", "rotate(-90deg)");
+                        $("#clouds").css("display", "block")
+                        $("#carbox").stop().animate({
+                            left:"-=100px"
+                        }, 500, function(){
+                            let carPosition = $("#carbox>img").offset();
+                            console.log("결과", carPosition.top + ":" + carPosition.left);
+                        });
+                    break;
+                    case 38:    //위
+                        $("#carbox").css("transform", "rotate(0deg)");
+                        $("#clouds").css("display", "block")
+                        $("#carbox").stop().animate({
+                            top:"-=100px"
+                        }, 500, function(){
+                            let carPosition = $("#carbox>img").offset();
+                            console.log("결과", carPosition.top + ":" + carPosition.left);
+                        });
+                    break;
+                    case 39:    //오른쪽
+                        $("#carbox").css("transform", "rotate(90deg)");
+                        $("#clouds").css("display", "block")
+                        $("#carbox").stop().animate({
+                            left:"+=100px"
+                        }, 500, function(){
+                            let carPosition = $("#carbox>img").offset();
+                            console.log("결과", carPosition.top + ":" + carPosition.left);
+                        });
+                    break;
+                    case 40:    //아래
+                        $("#carbox").css("transform", "rotate(180deg)");
+                        $("#clouds").css("display", "block")
+                        $("#carbox").stop().animate({
+                            top:"+=100px"
+                        }, 500, function(){
+                            let carPosition = $("#carbox>img").offset();
+                            console.log("결과", carPosition.top + ":" + carPosition.left);
+                        });
+                    break;
+
+                }
+            });
+        
+            //주차장의 좌표 //705.5556030273438:2044.444580078125
+            const parkPosition = $(".parking").position();
+            console.log(parkPosition.top +":"+ parkPosition.left);
+        
+        });
+
+      
+    </script>
+</head>
+<body>
+    <div id="carbox">
+        <img src="img/car.png" alt="방구차">
+        <div id="clouds">
+            <img src="img/cloud.gif" alt="cloud">
+        </div>
+    </div>
+    
+    <div class="parking"></div>
+</body>
+</html>

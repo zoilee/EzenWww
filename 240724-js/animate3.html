@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        html,body{
+            overflow:hidden;
+        }
+        div{
+            width:100px;
+            height:100px;
+            background:red;
+            position:absolute;
+        }
+        .start,.stop{
+            position:fixed;
+        }
+        .start{
+            bottom:0;
+            left:0;
+        }
+        .stop{
+            bottom:0;
+            right:0;
+        }
+    </style>
+    <script src="../js/jquery-1.12.4.min.js"></script>
+    <script>
+        $(document).ready(function(){  
+         $(".start").click(function(){
+           $("div").animate({
+              left: "5000px",
+           }, 1000);
+         });   
+         $(".stop").click(function(){
+            $("div").stop();
+         });
+        });
+    </script>
+</head>
+<body>
+    <button class="start">애니메이션 실행</button>
+    <button class="stop">애니메이션 정지</button>
+    <div></div>
+</body>
+</html>

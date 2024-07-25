@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{box-sizing: border-box;
+        }
+        .title{
+            text-align: center;
+        }
+        .contain{
+            width: 800px;
+            height: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        
+            
+            
+        }
+        .col{
+            width: 33.3334%;
+            padding: 30px;
+            float: left;
+            
+            overflow: hidden;
+            position: relative;
+        }
+        .col img{
+            max-width: 100%;
+        }
+        .text{
+            width: 100%;
+            height: 100px;
+            background-color: rgba(255, 255, 255, 0.7);
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            text-align: center;
+            display: none;
+        }
+        .col:hover .text{
+            display: block;
+        }
+        
+    </style>
+</head>
+<body>
+    <h1 class="title">카카오 프렌즈</h1>
+    <div class="contain">
+        <div class="col">
+            <img src="image/001.png" alt="개">
+            <div class="text"><h2>개</h2></div>
+        </div>
+        <div class="col">
+            <img src="image/002.png" alt="곰">
+            <div class="text"><h2>곰</h2></div>
+        </div>
+        <div class="col">
+            <img src="image/003.png" alt="오리">
+            <div class="text"><h2>오리</h2></div>
+        </div>
+    </div>
+</body>
+</html>

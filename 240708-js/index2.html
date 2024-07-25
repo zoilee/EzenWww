@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1 id="title"></h1>
+    <script>
+        /*
+            var 옛날 브라우저를 지원해야 할 경우 ===>
+            let , const 2015년 es6 에서 추가 ==> 블럭 
+            const 는 값을 변경하지 않아야 하는 경우(상수)
+            배열, 객체에서 유형을 변경하지 않을 경우
+        */
+        let a = true;
+        let b = false;
+        let c = 10> 5;
+        let d = Boolean(null);
+        //document.write(a, "<br>");
+        //document.write(b, "<br>");
+        //document.write(c, "<br>");
+        //document.write(d, "<br>");
+
+        let e;
+        //document.write(e, "<br>");
+
+        let f = 20;
+        f = null;
+        //f = "";
+        //document.write(f, "<br>");
+        let g = 10;
+        let h = "10";
+    
+        //typeof 타입확인
+
+       // document.write(typeof a, "<br>");
+       // document.write(typeof g, "<br>");
+        //document.write(typeof h, "<br>");
+
+        //세가지 경고 출력 방법
+        //alert("경고!!!");
+        //let age = prompt("당신의 나이를 입력하세요.");
+        //document.write(age , "님 환영합니다.");
+        
+        //let y = confirm("당신은 18세 이상입니까?");
+        //document.write(y);
+        let title = prompt("제목을 입력하세요");
+        document.getElementById("title").innerHTML = title;
+    </script>
+    
+</body>
+</html>

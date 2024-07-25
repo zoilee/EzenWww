@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+/*
+ 폰트의 색상 : color
+ 바탕화면의 색상 : background-color
+ 0 ~ f #000000; 검정 #ffffff; 흰색 #aaaaaa; 밝은회색
+ HSL : hue,색상 saturation,채도 lightness,명도 (잘 안씀)
+ 
+ 텍스트
+ HEX : 16진수 #00 00 00
+ RGB : 10진수 RGBA( 255, 255, 255, 0.5) //a는 투명도 1이 불투명 0이 투명
+ HSL : 색상값 hsl(hue, saturation, lightness);
+ 
+ 외곽선
+ border - 두께(border-witdth), 색상(border-color), 스타일(border-style)
+
+*/
+    body{
+        background-color: yellowgreen;
+    }
+    h1{
+        border-bottom: 2px dashed #333;
+        width: 300px;
+        height: 200px;
+        border-radius: 10px 30px 40px;
+    }
+    p{
+        color:rgb(255, 255, 0);
+        background-color: rgb(0, 0, 255);
+        width: 300px;
+    }
+    .yr{
+        color:#ff0000;
+        background-color: #ffffff;
+        border: 3px solid #000000;
+    }
+    .bw{
+        color:white;
+        background-color: hsl(255, 70%, 77%);
+    } 
+    .box{
+        width: 0;
+        height: 0;
+        border-top: 30px solid red;
+        border-right: 30px solid transparent;
+        border-bottom: 30px solid transparent;
+        border-left: 30px solid transparent;
+    }
+    </style>
+</head>
+<body>
+    <h1 class="bw">Hello World</h1>
+    <p>대통령은 조국의 평화적 통일을 위한 성실한 의무를 진다. 선거에 관한 경비는 법률이 정하는 경우를 제외하고는 정당 또는 후보자에게 부담시킬 수 없다.</p>
+
+    <p class="yr">외국인은 국제법과 조약이 정하는 바에 의하여 그 지위가 보장된다. 대통령이 궐위된 때 또는 대통령 당선자가 사망하거나 판결 기타의 사유로 그 자격을 상실한 때에는 60일 이내에 후임자를 선거한다.</p>
+
+    <p class="bw">선거와 국민투표의 공정한 관리 및 정당에 관한 사무를 처리하기 위하여 선거관리위원회를 둔다. 국회에서 의결된 법률안은 정부에 이송되어 15일 이내에 대통령이 공포한다.</p>
+    <div class="box"></div>
+
+</body>
+</html>

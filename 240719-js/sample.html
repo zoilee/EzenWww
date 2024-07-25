@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+       "use strict";
+        //1. 변수를 반드시 선언해야 쓸 수 있다.
+        let a = 10;
+        //defindProperty() -2. 읽기 전용 속성을 수정할 수 없다.
+        let obj = {};
+        Object.defineProperty(obj, "x",{value: 42, writeable : false})
+        
+        console.log(obj.x);
+        //3. 중복 매개변수 이름 금지
+        // function sum(a , a , c){
+        //     return a + a + c;
+        // }
+        // console.log(sum(5, 10, 20));
+
+        // const person = {
+        //     name: "철수",
+        //     age: 30,
+        //     city: "김포"
+        // };
+        //with 는 성능저하(변수를 찾기 위해 스코프를 검색해야 하므로 성능이 젛될 가능성이 있다.)
+        //가독성이 떨어진다 --> 디버깅이 어려움
+        //4. 엄격모드에선 with를 사용할 수 없다.
+        // with(person) {
+        //     console.log(name);
+        //     console.log(age);
+        //     console.log(city);
+        // }
+
+        //5. this 변경 금지
+        //6. 예약어 금지 --> 미래에 사용할 것 같은 예약어도 금지
+        let public = 10;
+        document.write(public);
+
+    </script>
+
+
+</body>
+</html>

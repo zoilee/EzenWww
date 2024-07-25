@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        /**
+         * 1초 - 1000msc
+         * 1분 - 1000 * 60
+         * 1시간 - 60 * 60 * 1000
+         * 1일 60 * 60 * 24 *1000
+         */
+            
+         
+
+        let today = new Date();
+        let endday = new Date(2024,11,20);
+
+        let diffDate = endday.getTime() - today.getTime();
+         
+        let result = Math.ceil(diffDate/(60 * 60 * 24 * 1000));
+        document.write("수료까지 우리는" + result + "일이나 남았어요. 망했어용.")
+
+
+    </script>
+</body>
+</html>

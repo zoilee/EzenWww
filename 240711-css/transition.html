@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div{
+            width: 100px;
+            height: 100px;
+            background: red;
+            transition: width 2s;
+            margin: 20px;
+        }
+        div:hover{
+            width: 500px;
+        }
+        .box1{
+            transition-timing-function: linear;
+        }
+        .box2{
+            transition-timing-function: ease;
+        }
+        .box3{
+            transition-timing-function: ease-in;
+        }
+        .box4{
+            transition-timing-function: ease-out;
+        }
+        .box5{
+            transition-timing-function: ease-in-out;
+        }
+        .box6{
+            transition-timing-function: cubic-bezier(.23, .90, .100, 0);
+        }
+    </style>
+</head>
+<body>
+    <div class="box1"></div>
+    <div class="box2"></div>
+    <div class="box3"></div>
+    <div class="box4"></div>
+    <div class="box5"></div>
+    <div class="box6"></div>
+</body>
+</html>
