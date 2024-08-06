@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        form{
+            width: 400px;
+            height: 250px;
+            padding: 40px;
+            border: 1px solid #ddd;
+            margin: 100px auto;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        form ul{
+            list-style: none;
+            margin: 0;
+            padding: 0;
+        }
+        form ul li{
+            padding-top:5px ;
+            padding-bottom: 5px;
+        }
+        input[type=text]{
+            padding: 5px;
+            width: 100%;
+        }
+        form ul li:last-child{
+            margin-top: 20px;
+        }
+        button{
+            font-size: 18px;
+            padding: 5px 20px;
+            margin-right: 10px;
+        }
+        .result{
+            font-size: 18px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <form action="">
+        <ul>
+            <li>
+                <label>1st Number</label>
+                <input type="text" id="fn">
+            </li>
+            <li>
+                <label>2st Number</label>
+                <input type="text" id="sn">
+            </li>
+            <li>
+                <button type="button" onclick="multplyAndDivdeBy(1)">곱하기</button>
+                <button type="button" onclick="multplyAndDivdeBy(2)">나누기</button>
+            </li>
+            <li>
+                <p id="result"></p>
+            </li>
+        </ul>
+    </form>
+    <script>
+        function multplyAndDivdeBy(n){
+            const num1 = document.getElementById("fn").value;
+            const num2 = document.getElementById("sn").value;
+            let result;
+            // if(!num1 || !num2){
+            //     alert("값을 입력하시지 않았습니다.");
+            // }else if(isNaN(num1)||isNaN(num2)){   //is not a number?  //
+            //     alert("값은 숫자만 입력해라");
+            // }
+            if(!num1 || !num2){
+                alert("값을 입력하시지 않았습니다.");
+            }else if(/[^0-9]/.test(num1)||/[^0-9]/.test(num2)){   //is not a number?  //
+                alert("값은 숫자만 입력해라");
+                }else{
+                    if(n==1){
+                        result = "두 수를 곱한 결과는 " + (num1 * num2) +" 입니다.";
+                        
+                    }else{
+                        result = "두 수를 나눈 결과는 " + (num1 / num2) +" 입니다.";
+                    };
+                    document.getElementById("result").innerHTML = result;
+                }
+
+        };
+
+
+        function divideBy(){
+
+        };
+    </script>
+</body>
+</html>

@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>tab</title>
+    <style>
+        a{
+            text-decoration: none;
+            color:#000;
+        }
+
+        .tab-nav::after{
+            content:"";
+            display:table;
+            clear:both;
+        } 
+
+        .tab-nav>a{
+            padding:8px 10px;
+            border:1px solid #333;
+            display:block;
+            float:left;
+            background:#fff;
+            color:#888;
+            background:#ddd;
+           
+        }
+        .tab-nav>a.active{
+            background:#fff;
+            border-bottom:1px solid #fff;
+            color:#000;
+        }
+        .tab-nav>a:first-child{
+            border-right:none;
+        }
+        .content-box{
+            padding:20px;
+            background:#fff;
+            border:1px solid #333;
+            width:300px;
+            margin-top:-1px;
+            display:none;
+        }
+        .act{
+            display:block;
+        }
+    </style>
+    <script src="../js/jquery-1.12.4.min.js"></script>
+    <script>
+    //    $(function(){
+    //       $(".tab-nav>a").click(function(e){
+    //          e.preventDefault(); //요소의 기능을 제거시킴
+    //          const act = $(this).data("act");
+    //          $(".tab-nav>a").removeClass("active");
+    //          $('.content-box').removeClass("act");
+    //          $(this).addClass("active");
+    //          $("#"+act).addClass("act");
+    //       })
+    //    });
+
+    </script>
+</head>
+<body>
+    <div class="tab">
+        <div class="tab-nav">
+            <a href="#" class="active link" data-act="notice">공지사항</a>
+            <a href="#" class="link" data-act="gallery">갤러리</a>
+        </div>
+        <div class="tab-content">
+            <div class="content-box act" id="notice">
+                공지사항 <br>
+                공지사항 <br>
+                공지사항 <br>
+                공지사항 <br>
+                공지사항 <br>
+            </div>  
+            <div class="content-box" id="gallery">
+                갤러리 <br>
+                갤러리 <br>
+                갤러리 <br>
+                갤러리 <br>
+            </div>
+        </div>
+    </div>
+    <script>
+        const tabs = document.querySelectorAll(".tab-nav >a");
+        const contents = document.querySelectorAll(".content-box");
+
+        tabs.forEach(function(tab){
+            tab.addEventListener("click",function(e){
+                e.preventDefault();
+                const act = tab.getAttribute("data-act");
+                //1. 모든 탭에서 active 클래스 제거  
+                tabs.forEach( r => r.classList.remove("active"));
+                //2. 모든 content-box에서 act 클래스 제거
+                contents.forEach( c => c.classList.remove("act"));
+                //3. 클릭된 탭에 active 클래스 추가
+                tab.classList.add("active");
+                //3. 클릭된 탭에 active 클래스 추가
+                document.getElementById(act).classList.add("act");
+            });
+        
+         });
+
+    </script>
+</body>
+</html>

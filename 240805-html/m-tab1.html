@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>mobile-tab</title>
+    <style>
+        *{
+            box-sizing: border-box;
+        }
+        body{
+            margin: 0;
+        }
+        .contain{
+            padding-top: 60px;
+        }
+        .tabcontent{
+            height: calc(100vh);
+            color: #fff;
+            padding: 40px;
+            text-align: center;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        #seoul{
+            background-color: red;;
+        }
+        #paris{
+            background-color: green;
+        }
+        #london{
+            background-color: blue;
+        }
+        #beijing{
+            background-color: orange;
+        }
+        .tablink{
+            height: 60px;
+            background-color: #666;
+            color: #fff;
+            float: left;
+            border: none;
+            outline: none;
+            cursor: pointer;
+            font-size: 18px;
+            width: 25%;
+        }
+        .tablink:hover{
+            background-color: #999;
+        }
+    </style>
+</head>
+<body>
+    <button class="tablink" onclick="openCity('seoul', this, 'red')" id="init">SEOUL</button>
+    <button class="tablink" onclick="openCity('paris', this, 'green')">PARIS</button>
+    <button class="tablink" onclick="openCity('london', this, 'blue')">LONDON</button>
+    <button class="tablink" onclick="openCity('beijing', this, 'orange')">BEIJING</button>
+    <div class="contain">
+        <div class="tabcontent" id="seoul">
+            <div class="box">
+                <h1>SEOUL</h1>
+                <p>대한민국의 수도입니다.</p>
+            </div>
+        </div>
+        <div class="tabcontent" id="paris">
+            <div class="box">
+                <h1>PARIS</h1>
+                <p>프랑스의 수도입니다.</p>
+            </div>
+        </div>
+        <div class="tabcontent" id="london">
+            <div class="box">
+                <h1>LONDON</h1>
+                <p>영국의 수도입니다.</p>
+            </div>
+        </div>
+        <div class="tabcontent" id="beijing">
+            <div class="box">
+                <h1>BEIJING</h1>
+                <p>중국의 수도입니다.</p>
+            </div>
+        </div>
+    </div>
+
+
+    <script>
+        function openCity(cityName, el, color){
+            let i, tabcontent, tablink;
+            tabcontent = document.getElementsByClassName("tabcontent");
+            tablink = document.getElementsByClassName("tablink");
+            for(i = 0; i<tabcontent.length;i++){
+                tabcontent[i].style.display = "none";
+
+            }
+            for(i=0;i<tablink.length;i++){
+                tablink[i].style.backgroundColor="";
+            }
+            document.getElementById(cityName).style.display="block";
+            el.style.backgroundColor=color;
+        }
+        document.getElementById("init").click();
+
+    </script>
+    
+</body>
+</html>

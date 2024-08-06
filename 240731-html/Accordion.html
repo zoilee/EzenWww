@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Accordion</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+        .container{
+            width: 1000px;
+            margin: 30px auto;
+        }
+        .accordion{
+            background: #ddd;
+            border-bottom: 1px dashed #666;
+            padding: 20px;
+            cursor: pointer;
+            transition: 0.3;
+        }
+        .accordion:hover, .active{
+            background: #ccc;
+        }
+        .panel{
+            padding: 0 20px;
+            background: #fff;
+            overflow: hidden;
+            height: 0;
+            max-height: 0;
+            transition: max-height 0.3s ease;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="accordion">Selection1<i class="fa-solid fa-arrow-down"></i></div>
+        <div class="panel">
+            <p>asfdsdfsadfdsfadsfasfsadfsadfasdfasdfasdfasfdsadf</p>
+        </div>
+        <div class="accordion">Selection2<i class="fa-solid fa-arrow-down"></i></div>
+        <div class="panel">
+            <p>asfdsdfsadfdsfadsfasfsadfsadfasdfasdfasdfasfdsadf</p>
+        </div>
+        <div class="accordion">Selection3<i class="fa-solid fa-arrow-down"></i></div>
+        <div class="panel">
+            <p>asfdsdfsadfdsfadsfasfsadfsadfasdfasdfasdfasfdsadf</p>
+        </div>
+        <div class="accordion">Selection4<i class="fa-solid fa-arrow-down"></i></div>
+        <div class="panel">
+            <p>asfdsdfsadfdsfadsfasfsadfsadfasdfasdfasdfasfdsadf</p>
+        </div>
+    </div>
+    <script>
+        // let aco = document.getElementsByClassName("accordion");
+        let aco = document.querySelectorAll(".accordion");
+        for(let i = 0; i < aco.length; i++) {
+            aco[i].addEventListener("click", function(){
+                // alert(i + "th click");
+                this.classList.toggle("active");
+                const panel = this.nextElementSibling;
+                const iconElement = this.querySelector("i");
+                if(iconElement.classList.contains("fa-arrow-down")){
+                    iconElement.classList.remove("fa-arrow-down")
+                    iconElement.classList.add("fa-arrow-up")
+                }else{
+                    iconElement.classList.remove("fa-arrow-up")
+                    iconElement.classList.add("fa-arrow-down")
+                }
+                if (panel.style.maxHeight) {
+                    panel.style.maxHeight = null;
+                } else {
+                    panel.style.maxHeight = panel.scrollHeight + "px";
+                }
+            });
+        }
+    </script>
+</body>
+</html>

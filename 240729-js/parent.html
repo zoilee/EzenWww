@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div,ul,li,span{
+            display: block;
+            border: 2px solid #ddd;
+            color: #ddd;
+            padding: 5px;
+            margin: 15px;
+        }
+        div{
+            width: 500px;
+        }
+    </style>
+    <script src="../js/jquery-1.12.4.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            // $("span").parentsUntil("div").css({
+            //     color: "red",
+            //     border: "2px solid red"
+            // });
+            // $("ul").children().css({
+            //     color: "blue",
+            //     border: "2px solid blue"
+            // });
+            $("div").find("*").css({
+                color: "blue",
+                border: "2px solid blue"
+            });
+        });
+    </script>
+</head>
+<body>
+    body
+    <div>div
+        <ul>ul
+            <li>li
+                <span>span</span>
+            </li>
+        </ul>
+    </div>
+</body>
+</html>

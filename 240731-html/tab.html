@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tab</title>
+    <style>
+        a{
+            text-decoration: none;
+            color: #333;
+        }
+        .tab-nav{background: #dfdfdf;}
+            
+
+        .tab-nav::after{
+            content: "";
+            display: table;
+            clear: both;
+        }
+        .tab-nav>a{
+            float: left;
+            display: block;
+            text-align: center;
+            padding: 20px 15px;
+            background: #dfdfdf;
+        }
+        .tab-nav>a.active{
+            background: #7e7d7d;
+        }
+        .con-box{
+            display: none;
+        }
+        .act{
+            display: block;
+        }
+        
+
+    </style>
+    <script src="../js/jquery-1.12.4.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            $(".tab-nav>a").click(function(e){
+                e.preventDefault;
+                const i = $(this).data("act")
+                $(".tab-nav>a").removeClass("active");
+                $(".con-box").removeClass("act");
+                $(this).addClass("active");
+                $("#"+i).addClass("act");
+
+            });
+        }); 
+    </script>
+</head>
+<body>
+    <div class="container">
+        <h1>Tab</h1>
+        <div class="tab-nav">
+            <a href="#" class="active" data-act="london">London</a>
+            <a href="#" data-act="paris">Paris</a>
+            <a href="#" data-act="seoul">Seoul</a>
+        </div>
+        <div class="tab-content">
+            <div class="con-box act" id="london">
+                <h2>London</h2>
+                <a href="#">런던 London, 고대 영어: Lunden 룬덴, 라틴어: Londinium 론디니움은 영국과 잉글랜드의 수도이자 최대 도시이다. 인구는 2014년 기준 8,538,689명으로 영국은 물론 유럽 전체 대도시권 중 가장 큰 권역이며, 음역어로는 倫敦(윤돈)이라 부른다</a>
+            </div>
+            <div class="con-box" id="paris">
+                <h2>Paris</h2>
+                <a href="#">파리 프랑스어: Paris, 프랑스어 발음: paʁi, 문화어: 빠리는 프랑스의 수도로, 중북부 일드프랑스 지방의 중앙에 있다. 센강 중류에 있으며, 면적은 105 km2. 인구는 2023년 1월 기준으로 2,102,650명이며, 프랑스에서 가장 큰 도시이다.</a>
+            </div>
+            <div class="con-box" id="seoul">
+                <h2>Seoul</h2>
+                <a href="#">서울특별시 首爾特別市, 영어: Seoul Metropolitan City는 대한민국의 수도이자 문화·인문·정치·경제 중심지 역할을 하는 도시로, 경기도와 인천광역시까지 아우르는 수도권의 중심축 역할을 하고 있다. 대한민국에서 유일하게 특별시로 지정된 도시로서, 2023년 기준으로 인구 수는 약 940만 명이다.</a>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

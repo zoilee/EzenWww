@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        a{
+            text-decoration: none;
+            color: #333
+        }
+        .container{
+            
+            height: 600px;
+            border: 1px solid #333;
+            text-align: center;
+        }
+        .calbox{
+            width: 250px;
+            margin: 50px  auto 5px;
+
+
+
+        }
+        .calbox div:first-child{
+            float: left;
+        }
+        .calbox div:nth-child(2){
+            float: left;
+        }
+        .btbox{
+            margin: 0 auto;
+            width: 300px
+        }
+        button{
+            margin: 5px;
+            width: 60px;
+            height: 40px;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="calbox">
+            <form action="">
+                <div><a href="#">1st Num</a><input type="text" id="1stNum" value=""></div>
+                <div><a href="#">2st Num</a><input type="text" id="2ndNum" value=""></div>
+                <button type="button" id="mul">곱하기</button>
+                <button type="button" id="sum">나누기</button>
+            </form>
+        </div>
+        <a href="#" id="resualt">두 수를 곱한(나눈) 결과는      입니다.</a>
+        
+    </div>
+    <script>
+        
+        document.getElementById("mul").addEventListener("click",
+            function mult(){
+            let num1 = document.getElementById("1stNum");
+            let num2 = document.getElementById("2ndNum");
+            let rs1 = num1.value * num2.value;
+            document.getElementById("resualt").textContent = "두 수를 곱한 결과는   " + rs1 +"입니다."
+        });
+        
+        document.getElementById("sum").addEventListener("click",
+            function summ(){
+            let num1 = document.getElementById("1stNum");
+            let num2 = document.getElementById("2ndNum");
+            let rs2 = num1.value / num2.value;
+            let rs3 = num1.value % num2.value;
+            // if (num1.value % num2.value == 0  ){
+                document.getElementById("resualt").textContent = "두 수를 나눈 결과는   " + rs2 +"입니다."
+            // }
+            // else{
+            //     document.getElementById("resualt").textContent = "두 수를 나눈 결과는   " + rs2 +"에 나머지는" + rs3 + "입니다."
+            // }
+            
+        });
+
+    </script>
+</body>
+</html>

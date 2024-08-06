@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box{
+            width: 100px;
+            height: 100px;
+            border: 1px solid #333;
+        }
+        .color{
+            background-color: red;
+        }
+    </style>
+    <script src="../js/jquery-1.12.4.min.js"></script>
+    <script>
+        $(function(){
+            $(".addbtn").click(function(){
+                //$("선택자").addClass("클래스이름");
+                $(".box").addClass("color");
+            });
+            $(".removebtn").click(function(){
+                $(".box").removeClass("color")
+            });
+            $(".togglebtn").click(function(){
+                $(".box").toggleClass("color");
+            });
+
+        });
+    </script>
+</head>
+<body>
+    <div class="box">
+    </div>
+    <button class="addbtn">color change</button>
+    <button class="removebtn">remove color</button>
+    <button class="togglebtn">toggle</button>
+<br>
+    <button onclick="addbtn()">color change</button>
+    <button onclick="removebtn()">remove color</button>
+    <button onclick="togglebtn()">toggle</button>
+<br>
+    <button id="addbtn">color change</button>
+    <button id="removebtn">remove color</button>
+    <button id="togglebtn">toggle</button>
+    <script>
+        const box = document.getElementsByClassName("box")[0];
+        function addbtn() {
+            if(!box.className.includes("color"))
+            box.className += " color";
+        }
+        function removebtn() {
+            box.className = box.className.replace(/\bcolor/g, '').trim();
+        }
+
+        //선택자.classList.add() element.classList.reomve() element.classList toggle()
+        document.getElementById("addbtn").addEventListener("click", function(){
+            box.classList.add("color");
+        });
+        document.getElementById("removebtn").addEventListener("click", function(){
+            box.classList.remove("color");
+        });
+        document.getElementById("togglebtn").addEventListener("click", function(){
+            box.classList.toggle("color");
+        });
+
+    </script>
+</body>
+</html>

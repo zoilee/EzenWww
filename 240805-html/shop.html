@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            box-sizing: border-box;
+        }
+        body{
+            margin: 0;
+        }
+
+        .simgbox img{
+            width: 33.3333%;
+            float: left;
+            margin: 0px;
+
+        }
+        .imgbox{
+            height: 500px;
+        }
+        .contain{
+            width: 500px;
+            height: 500px;
+            object-fit: cover;
+            margin: 0 auto;
+        }
+        .imgbox img{
+            width: 500px;
+            height: 500px;
+        }
+    </style>
+</head>
+<body>
+    <div class="contain">
+        <div class="imgbox"><img src="../source/테이텀-2-사이드워크-초크-pf-농구화-oZFw29Sg.jpg" alt="" id="mainimg"></div>
+        <div class="simgbox">
+            <img src="../source/gt-허슬-2-빅터-웸반야마-ep-농구화-YrkZN0OP.jpg" alt="" id="subimg" onclick="changeImg">
+            <img src="../source/kd16-ep-농구화-7zHtGbpe.jpg" alt="" id="subimg" onclick="changeImg">
+            <img src="../source/테이텀-2-사이드워크-초크-pf-농구화-oZFw29Sg.jpg" alt="" id="subimg" onclick="changeImg">
+        </div>
+    </div>
+    <script>
+        let i;
+        function changeImg(){
+
+            main = document.getElementById("imgbox");
+            sub = document.getElementById("subimg");
+            main.innerHTML = <div style='color:'>A</div>
+
+        };
+    </script>
+</body>
+</html>

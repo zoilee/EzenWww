@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div,ul,li,span,p,h2,h3{
+            display: block;
+            border: 2px solid #ddd;
+            color: #ddd;
+            padding: 5px;
+            margin: 15px;
+        }
+        div{
+            width: 500px;
+        }
+    </style>
+    <script src="../js/jquery-1.12.4.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            $("span").nextUntil("ul").css({
+                border : "2px solid #333",
+                color : "#333"
+            })
+        });
+    </script>
+</head>
+<body>
+    <div>div
+        <p>p</p>
+        <span>span</span>
+        <h2>h2</h2>
+        <h3>h3</h3>
+        <ul>ul
+            <li>li1</li>
+            <li>li2</li>
+            <li>li3</li>
+            <li>li4</li>
+            <li>li5</li>
+        </ul>
+    </div>
+</body>
+</html>

@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .slide{
+            width: 1200px;
+            height: 300px;
+            margin: 100px auto;
+            position: relative;
+            overflow: hidden;
+        }
+        .slidein{
+            width: 3600px;
+            height: 300px;
+            position: absolute;
+            top: 0;
+            left: 0;
+        }
+        .fakeimg{
+            width: 1200px;
+            height: 300px;
+            text-align: center;
+            line-height: 300px;
+            font-size: 40px;
+            float: left;
+        }
+        .img1{
+            background: forestgreen;
+        }
+        .img2{
+            background: tomato;
+        }
+        .img3{
+            background: lightblue;
+        }
+    </style>
+    <script src="../js/jquery-1.12.4.min.js"></script>
+    <script>
+        $(function(){
+
+            setInterval(slideShow, 3000);
+
+            function slideShow(){
+                $(".slidein").animate({
+                    "left": "-1200px"
+                }, 500, function(){
+                    //제일 앞에있는.이미지를 복사해서. slidein박스 안에 있는 이미지중 가장 뒤에 붙인다.
+                    $(".slidein .fakeimg:eq(0)").clone().appendTo(".slidein");
+                    $(".slidein .fakeimg:eq(0)").remove();
+                    $(".slidein").css("left", 0);
+                });
+            };    
+        });
+    </script>
+</head>
+<body>
+    <div class="slide">
+        <div class="slidein">
+            <div class="fakeimg img1">1</div>
+            <div class="fakeimg img2">2</div>
+            <div class="fakeimg img3">3</div>
+        </div>
+    </div>
+</body>
+</html>

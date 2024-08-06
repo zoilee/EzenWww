@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .hamb{
+            width: 30px;
+            margin: 30px 50px;
+            cursor: pointer;
+        }
+        .hamb span{
+            display: block;
+            height: 2px;
+            background:#000;
+            margin-bottom: 8px;
+        }
+        .sideNav{
+            height: 100%; 
+            position: fixed;
+            z-index: 100;
+            top: 0;
+            left: 0;
+            width: 0;
+            background-color: rgb(200, 255, 255);
+            overflow-x: hidden;
+            transition: all 600ms;
+            padding-top:60px;
+        }
+        .sideNav a{
+            padding: 8px 8px 8px 32px;
+            text-decoration: none;
+            font-size: 25px;
+            color: #000;
+            display: block;
+            transition: all 0.3s;
+        }
+        .sideNav a:hover{
+            color: #666;
+            text-decoration: underline;
+        }
+        .sideNav span{
+            cursor:pointer;
+            position: absolute;
+            font-size: 35px;
+            top: 20px;
+            right: 30px;
+        }
+    </style>
+</head>
+<body>
+    <div class="hamb" id="hamb">
+        <span></span>
+        <span></span>
+        <span></span>
+    </div>
+    <div id="sideNav" class="sideNav">
+        <span id="close">&times;</span>
+        <a href="#">aboute</a>
+        <a href="#">services</a>
+        <a href="#">products</a>
+        <a href="#">contact</a>
+    </div>
+    <script>
+        const hamb = document.getElementById("hamb");
+        const close = document.getElementById("close");
+        hamb.addEventListener("click", function(){
+            document.getElementById("sideNav").style.width="250px"
+        });
+        close.addEventListener("click",function(){
+            document.getElementById("sideNav").style.width="0px"
+        });
+    </script>
+</body>
+</html>

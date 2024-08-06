@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            box-sizing: border-box;
+        }
+        .img-box{
+            width: 275px;
+        }
+        .b-img>img{
+            width: 275px;
+            height: 275px;
+            object-fit: cover;
+            object-position: center top;
+            border: 1px solid #666;
+            display: block;
+        }
+        .s-box img{
+            float: left;
+            width: 25%;
+            border-left: 1px solid #666;
+            border-bottom: 1px solid #666;
+            height: 90px;
+            object-fit: cover;
+            cursor: pointer;
+        }
+        .s-box img:last-child{
+            border-right: 1px solid #666;
+        }
+    </style>
+</head>
+<body>
+    <div class="img-box">
+        <div class="b-img">
+            <img src="../web03/images/0190000011493.gif" alt="">
+        </div>
+        <div class="s-box">
+            <img src="../web03/images/0190000011493.gif" alt="">
+            <img src="../web03/images/0190000011513.gif" alt="">
+            <img src="../web03/images/0230010020383.gif" alt="">
+            <img src="../web03/images/2502.gif" alt="">
+
+        </div>
+    </div>
+    <script>
+        const thumbnails = document.querySelectorAll(".s-box img");
+
+        thumbnails.forEach(function(thumbnail){
+            thumbnail.addEventListener("click", function(e){
+                const changeImg = e.target.src;
+                document.querySelector(".b-img img").src=changeImg;
+            });
+        });
+
+
+    </script>
+</body>
+</html>

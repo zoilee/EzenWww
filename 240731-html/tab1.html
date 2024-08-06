@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container{
+            width:1000px;
+            margin: 30px auto;
+        }
+        .tab{
+            display: flex;
+        }
+        .tablinks{
+            padding: 10px 20px;
+            background-color: #ddd;
+            border-right: none;
+            color: #999;
+            text-decoration: none;
+        }
+        .active{
+            color: #333;
+            background: #eee;
+        }
+        .contents{
+            background: #eee;
+            padding :30px;
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="tab">
+            <a href="#" id="default" class="tablinks active" onclick="viewCity(this, 'london')">런던</a>
+            <a href="#" class="tablinks" onclick="viewCity(this, 'paris')">파리</a>
+            <a href="#" class="tablinks" onclick="viewCity(this, 'seoul')">서울</a>
+        </div>
+        <div class="contents" id="london">
+            <h1>런던은 영국의 수도 입니다.</h1>
+            <p>버킹엄 궁전이 유명하답니다. 그런데 비도 많이 오고 지하철에서는 오줌 냄새가 난다는 소문이 있답니다</p>
+        </div>
+        <div class="contents" id="paris">
+            <h1>파리는 프랑스의 수도 입니다.</h1>
+            <p>2024년 하계 올림픽이 열리는 도시 이기도 합니다. 그런데 파리에서도 지하철에서는 오줌 냄새가 난다는 소문이 있데용</p>
+        </div>
+        <div class="contents" id="seoul">
+            <h1>서울은 대한민국의 수도입니다</h1>
+            <p>종로에는 사과나무를 심어보자. 그 길에서 꿈을 꾸며 걸어가리라.</p>
+        </div>
+    </div>
+
+    <script>
+        function viewCity(e, cityName){
+            console.log(e);
+            let i;
+            const tabcontent=document.getElementsByClassName("contents");
+            const tablinks = document.getElementsByClassName("tablinks")        
+            for (i=0; i<tabcontent.length;i++ ){
+                tabcontent[i].style.display="none";
+            }
+            for (i=0; i<tablinks.length;i++ ){
+                tablinks[i].classList.remove("active");
+            }
+            e.classList.add("active");
+            document.getElementById(cityName).style.display="block";
+        }
+        document.getElementById("default").click();
+    </script>
+</body>
+</html>

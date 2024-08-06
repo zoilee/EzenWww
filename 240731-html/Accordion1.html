@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+        .container{
+            width:1000px;
+            margin:30px auto;
+        }
+        .accordion{
+            background:#ddd;
+            border-bottom:1px dashed #999;
+            padding:20px;
+            cursor:pointer;
+            transition: 0.3;
+        } 
+        .accordion:hover, .active{
+            background:#ccc;
+        }
+        .accordion i{
+            float:right;
+        }
+        .panel{
+            padding: 0 20px;
+            background:#fff;
+            overflow:hidden;
+            max-height:0;
+            transition: max-height 0.3s ease;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+       <div class="accordion">아코디언 메뉴1 <i class="fa-solid fa-chevron-down"></i></div>
+       <div class="panel">
+          <p>대한민국의 영토는 한반도와 그 부속도서로 한다. 대통령은 전시·사변 또는 이에 준하는 국가비상사태에 있어서 병력으로써 군사상의 필요에 응하거나 공공의 안녕질서를 유지할 필요가 있을 때에는 법률이 정하는 바에 의하여 계엄을 선포할 수 있다.</p>
+          <p>국회의원은 그 지위를 남용하여 국가·공공단체 또는 기업체와의 계약이나 그 처분에 의하여 재산상의 권리·이익 또는 직위를 취득하거나 타인을 위하여 그 취득을 알선할 수 없다.</p>      
+       </div>
+       <div class="accordion">아코디언 메뉴2 <i class="fa-solid fa-chevron-down"></i></div>
+       <div class="panel">
+          <p>대한민국의 영토는 한반도와 그 부속도서로 한다. 대통령은 전시·사변 또는 이에 준하는 국가비상사태에 있어서 병력으로써 군사상의 필요에 응하거나 공공의 안녕질서를 유지할 필요가 있을 때에는 법률이 정하는 바에 의하여 계엄을 선포할 수 있다.</p>
+          <p>국회의원은 그 지위를 남용하여 국가·공공단체 또는 기업체와의 계약이나 그 처분에 의하여 재산상의 권리·이익 또는 직위를 취득하거나 타인을 위하여 그 취득을 알선할 수 없다.</p>      
+       </div>
+       <div class="accordion">아코디언 메뉴3 <i class="fa-solid fa-chevron-down"></i></div>
+       <div class="panel">
+          <p>대한민국의 영토는 한반도와 그 부속도서로 한다. 대통령은 전시·사변 또는 이에 준하는 국가비상사태에 있어서 병력으로써 군사상의 필요에 응하거나 공공의 안녕질서를 유지할 필요가 있을 때에는 법률이 정하는 바에 의하여 계엄을 선포할 수 있다.</p>
+          <p>국회의원은 그 지위를 남용하여 국가·공공단체 또는 기업체와의 계약이나 그 처분에 의하여 재산상의 권리·이익 또는 직위를 취득하거나 타인을 위하여 그 취득을 알선할 수 없다.</p>      
+       </div>
+       <div class="accordion">아코디언 메뉴4 <i class="fa-solid fa-chevron-down"></i></div>
+       <div class="panel">
+          <p>대한민국의 영토는 한반도와 그 부속도서로 한다. 대통령은 전시·사변 또는 이에 준하는 국가비상사태에 있어서 병력으로써 군사상의 필요에 응하거나 공공의 안녕질서를 유지할 필요가 있을 때에는 법률이 정하는 바에 의하여 계엄을 선포할 수 있다.</p>
+          <p>국회의원은 그 지위를 남용하여 국가·공공단체 또는 기업체와의 계약이나 그 처분에 의하여 재산상의 권리·이익 또는 직위를 취득하거나 타인을 위하여 그 취득을 알선할 수 없다.</p>      
+       </div>
+    </div>
+    <script>
+       //let aco = document.getElementsByClassName("accordion");
+       let aco = document.querySelectorAll(".accordion");
+       for(let i = 0; i < aco.length; i++) {
+          aco[i].addEventListener("click", function(){
+             //alert(i + "번째 클릭");
+             this.classList.toggle("active");
+             const panel = this.nextElementSibling;
+             const iconElement = this.querySelector("i");
+
+             if(iconElement.classList.contains("fa-chevron-down")){
+                iconElement.classList.remove("fa-chevron-down");
+                iconElement.classList.add("fa-chevron-up");
+             }else{
+                iconElement.classList.remove("fa-chevron-up");
+                iconElement.classList.add("fa-chevron-down");               
+             }
+             if(panel.style.maxHeight){
+                panel.style.maxHeight = null;
+             }else{
+                panel.style.maxHeight = panel.scrollHeight + "px";
+             }
+          });
+       }
+    </script>
+</body>
+</html>
