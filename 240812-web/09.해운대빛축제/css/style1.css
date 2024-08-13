@@ -17,8 +17,7 @@ header{
 .container{
     margin-left: 215px;
     width: 785px;
-    height: 650px;
-    border: 1px solid #333;
+
 }
 ul.gnb,ul.lnb{
     margin: 0;
@@ -81,7 +80,7 @@ ul.lnb>li:hover>a{
 .main{
     height: 200px;
     display: flex;
-    border: 1px solid #333;
+    border-right: 1px solid #d5e4f6;
 }
 .main>div{
     width: 30%;
@@ -114,9 +113,132 @@ ul.lnb>li:hover>a{
 .facebook{
     background-position: -125px 0;
 }
+.instagram{
+    background-position: -190px 0;
+}
 .youtube{
     background-position: -65px -50px;
 }
+.main div.notice{
+    width: 40%;
+    padding: 10px;
+}
+.tab-nav{
+    padding-top: 5px;
+    padding-left: 15px;
+    display: flex;
+}
+.tab-nav a{
+    background: #ccc;
+    color: #999;
+    padding: 5px 15px;
+    
+}
+.tab-nav a.active{
+    background: #eee;
+    color: #000;
+}
+.tab-content{
+    background: #eee;
+    padding: 10px;
+    height: 140px;
+}
+.tab-content>div{
+    display: none;
+}
+.tab-content>div.act{
+    display: block;
+}
+.notice-ul{
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+.notice-ul li{
+    border-bottom: 1px dashed #999;
+}
+.notice-ul li:last-child{
+    border: none;
+}
+.notice-ul a{
+    display: inline-block;
+    width: 190px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    padding: 3px 0;
+    font-size: 15px;
+}
+.notice-ul li:hover{
+    background: #ddd;
+
+}
+
+.notice-ul span{
+    float: right;
+    font-size: 15px;
+}
+#gallery{
+    height: 100%;
+}
+#gallery img{
+    width: 80px;
+    height: 80px;
+    object-fit: cover;
+    margin: 20px 3px;
+    
+}
+
 footer{
     height: 100px;
+    background: #d5e4f6;
+    display: flex;
+}
+.footer-box{
+    width: 100%;
+}
+footer img{
+    margin-top: 30px;
+    margin-left: 30px;
+}
+.footer-nav{
+    height: 50px;
+    width: 100%;
+    padding: 0 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #d5e4f6;
+}
+.footer-nav a{
+    margin-left: 30px;
+}
+.footer-nav a:hover{
+    background: #999;
+    color: #fff;
+}
+.copy{
+    text-align: center;
+    line-height: 20px;
+    background: #d5e4f6;
+}
+.popup{
+    position: fixed;
+    width: 500px;
+    height: 350px;
+    border: 1px solid #ddd;
+    z-index: 100;
+    top: 150px;
+    left: 250px;
+    background: #fff;
+    box-shadow: 0 0 15px 0 rgba(0, 0, 0, 0.2);
+    padding: 30px;
+    display: none;
+}
+.close{
+    position: absolute;
+    bottom: 30px;
+    left: 50%;
+    transform: translateX(-50px);
+    padding: 5px 15px;
 }
