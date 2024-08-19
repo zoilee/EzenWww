@@ -1,0 +1,146 @@
+.container{
+    height: calc(100% - 120px);
+    display: flex;
+}
+.l_nav{
+    width: 200px;
+    border: 1px solid #333;
+}
+.logo_box{
+    border-bottom: 1px dashed #333;
+}
+.logo_box img{
+    padding: 10px 0;
+}
+.nav_box{
+    margin-top: 10px;
+}
+.nav_box>ul{
+    padding: 0;
+    margin: 0 5px;
+    list-style-type: none;
+}
+.nav_box a{
+    padding-left: 2px;
+    display: block;
+    background: #ffb1b1;
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: 600;
+    border: 1px solid #333;
+    border-bottom: none;
+    color: #333;
+}
+.nav_box ul li:last-child a {
+    border-bottom: 1px solid #333;
+}
+.nav_box a:hover{
+    background-color: #ff7b7b;;
+    color: #ffffff;
+}
+.sub_menu{
+    display: none;
+    list-style-type: none;
+    padding: 0;
+    
+    margin: 0;
+    border: 1px solid #333;
+    border-bottom: none;
+    background: #ffb1b1;
+}
+.sub_menu li{
+    padding-left: 10px;
+}
+.sub_menu li:hover{
+    background-color: #ff7b7b;;
+    color: #ffffff;
+}
+.nav_box ul li:last-child ul{
+    border-top: none;
+    border-bottom: 1px solid #333;
+}
+.l_text{
+    position: relative;
+    display: flex;
+    justify-content: center;
+}
+.l_text a{
+    margin: 10px;
+
+}
+.l_text a:first-child:after{
+    position: absolute;
+    content: "";
+    left: calc(50%);
+    border: 1px solid #333; 
+    height: 20px;
+}
+
+/******** hero ********/
+.hero{
+    width: 400px;
+    border: 1px solid #333;
+    
+}
+.h_logo{
+    border-bottom: 1px dashed #333;
+    display: flex;
+    align-items: center;
+    padding-bottom: 5px;
+}
+.h_logo ul{
+    padding: 0;
+    margin: 10px 0 10px 5px;
+    list-style-type: none;
+}
+.h_logo ul h1{
+    margin: 0;
+}
+.h_logo img{
+    margin: 5px;
+}
+.notice{
+    padding: 10px 0 30px 10px;    
+    border-bottom: 1px dashed #333;
+}
+.notice h3{
+    display: inline-block;
+    border: 1px solid #333;
+    border-bottom: none;
+    padding: 5px;
+    margin: 0;
+}
+.noitce_text{
+    border-top: 1px solid #333;
+}
+.notice p{
+    margin: 0;
+    padding: 10px 0;
+    border-bottom: 1px solid #333;
+}
+.gallery{
+    padding: 10px 0 30px 10px;    
+    border-bottom: 1px dashed #333;
+}
+.gallery h3{
+    display: inline-block;
+    border: 1px solid #333;
+    border-bottom: none;
+    padding: 5px;
+    margin: 0;
+}
+.gallery_ibox{
+    display: flex;
+    justify-content: space-between;
+    padding-right: 10px;
+}
+
+
+.imgs{
+    width: calc(100% - 600px);
+    border: 1px solid #333;
+}
+footer{
+    width: 100%;
+    height: 120px;
+}
