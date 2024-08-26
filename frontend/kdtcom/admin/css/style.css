@@ -1,0 +1,14 @@
+body{
+    font-family: 'Noto Sans KR', sans-serif;
+    background: #efefef;
+    font-size: 16px;
+}
+
+.admin-login{
+    width: 600px;
+    height: 350px;
+    background: #fff;
+    margin: 0 auto;
+    border-radius: 8px;
+    padding: 80px;
+}
