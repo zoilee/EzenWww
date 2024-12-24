@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../res/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../res/admin/css/style.css">
+    <script src="../res/js/jquery.min.js"></script>
+    <script src="../res/js/popper.min.js"></script>
+    <script src="../res/js/bootstrap.min.js"></script>
+    <script src="../res/admin/js/script.js"></script>
+</head>
+<body>
+    <div class="container">
+        <!-- header-->
+        <header class="row">
+            <div class="col-md-12 bg-white rounded pt-4 pb-3 pl-4 mt-3 d-flex align-items-center justify-content-between">
+                <h4 class="font-weight-bold">관리자모드</h4>
+                <nav>
+                    <a href="#" class="btn btn-outline-dark mx-2">게시판생성</a>
+                    <a href="#" class="btn btn-outline-dark mx-2">회원관리</a>
+                    <a href="#" class="btn btn-outline-danger mx-2">로그아웃</a>
+                </nav>
+            </div>
+        </header>
+        <!-- /header-->
+
+        <div class="row">
+            <!-- aside-->
+            <aside class="col-md-3 col-12 list-group bg-white rounded p-4 mt-3">
+                <div class="btn-group list-group-item list-group-item-action active">
+                    <button type="button" class="dropdown-toggle btn  text-white" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    회원관리
+                    </button>
+                    <div class="dropdown-menu">
+                        <a href="memlist.html" class="dropdown-item">회원관리</a>
+                        <a href="#" class="dropdown-item" data-toggle="modal" data-target="#gradeModal" >회원등급관리</a>
+                    </div>
+                </div>    
+                <a href="notice.html" class="list-group-item list-group-item-action">공지사항등록</a>
+                <a href="list.html" class="list-group-item list-group-item-action">커뮤니티관리</a>
+                <a href="#" class="list-group-item list-group-item-action">etc</a>
+                <a href="logout.html" class="list-group-item list-group-item-action disabled">로그아웃</a>
+            </aside>
+            <!--/aside-->
+            <!--body-->
+            <div class="col-md-9 col-12 mt-3">
+                <div class="row">
+                    <div class="bg-white rounded p-5 w-100 ml-3">
+        
+                        본문내용
+
+                    </div>
+                </div>
+            </div>
+
+            <!-- Modal -->
+            <div class="modal fade" id="gradeModal" tabindex="-1" aria-labelledby="gradeModalLabel" aria-hidden="true">
+                <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                    <h5 class="modal-title" id="gradeModalLabel">Modal title</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                    </div>
+                    <div class="modal-body p-5 modal-grade">
+                        <form name="gradeForm" action="memgrade" method="post" id="gradeForm">
+                            <div class="row mt-3 pb-3 border-bottom grade">
+                                <label for="" class="col-2 text-center">0</label>
+                                <input type="text" class="form-control col-9" name="grade-0" value="손님">
+                            </div>
+                            <div class="row mt-3 pb-3 border-bottom grade">
+                                <label for="" class="col-2 text-center">1</label>
+                                <input type="text" class="form-control col-9" name="grade-1" value="일반회원">
+                            </div>
+                            <div class="row mt-3 pb-3 border-bottom grade">
+                                <label for="" class="col-2 text-center">2</label>
+                                <input type="text" class="form-control col-9" name="grade-2" value="특별회원">
+                            </div>
+
+                        </form>
+                        <div class="row mt-4 d-flex justify-content-center">
+                            <button type="button" class="btn btn-danger mr-2 " id="del_grade"> 회원등급 삭제 </button>
+                            <button type="button" class="btn btn-primary ml-1 " id="add_grade"> 회원등급 추가 </button>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-primary">Save changes</button>
+                    </div>
+                </div>
+                </div>
+            </div>
+
+            <!--/body-->
+        </div>
+        <!--footer-->
+        <footer class="row">
+            <div class="col-md-12 bg-white rounded p-3 mt-3">
+                footer
+            </div>
+        </footer>
+        <!--/footer-->
+
+    </div>
+    
+</body>
+</html>
